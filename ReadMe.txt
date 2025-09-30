@@ -45,7 +45,7 @@ Code:
    <script>
      document.getElementById('year').textContent = new Date().getFullYear();
    </script>
-Source: https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Global_Objects/Date
+Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 Function: Automatically shows the year in the footer by filling it inside the span.
 
 2. CSS Reset
