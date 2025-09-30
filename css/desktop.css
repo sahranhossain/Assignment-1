@@ -1,0 +1,33 @@
+/*----------------------------
+desktop.css 
+For desktops and laptops
+----------------------------*/
+
+/* Desktop Navigations Menu */
+/* Style the unordered list (<ul>) insdie the nav */
+nav ul{
+    list-style: none; /* no bullet points the lists */
+    margin: 0; /* remove default spacing around the list */
+    padding: 0; /* remove default padding inside the list */
+    text-align: right; /* aligns the nav items to the right side of the header */
+}
+
+/*Style each list item (<li>) inside the ul */
+nav li{
+    display: inline-block; /* keeps the links side by side */
+    margin: 0 16px; /* adds horizontal spacing between nav links */
+}
+
+/* Style each link (<a>) inside the list items */
+nav a{
+    padding: 10px 14px; /* makes each link easier to click with more padding */
+    border-radius: 1.05rem; /* slightly bigger text on large screens */
+
+}
+
+/*Main content adjustments for desktops and laptops*/
+main {
+    max-width: 1000px; /* keeps text from stretching too wide (makes it easy to read) */
+    margin: 30px auto; /* centers the content on screen */
+    padding: 24px; /* adds more breathing room inside the content */
+}

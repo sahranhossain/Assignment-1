@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- tells the browser this is HTML5 -->
+<html lang="en"> <!-- language of the page set to English -->
+<head>
+    <meta charset="UTF-8"> <!-- supports special characters like é -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- makes page responsive on mobile -->
+    <title>My Portfolio - Home</title> <!-- tab title in the browser -->
+
+    <!--Linking to the CSS files-->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 600px)"> 
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 601px) and (max-width: 900px)">
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 901px)">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    
+    <!-- Header section with site title and navigation-->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+               <!--Navigation menu with links to other pages-->
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="about.html" aria-current="page">About Me</a></li>
+               <li><a href="projects.html">Projects</a></li>
+               <li><a href="contact.html"> Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main content within the Contact Page-->
+    <main>
+        <h2>Contact Me</h2>
+
+        <!--Contact form begins-->
+        <form action="#" method="post">
+
+            <!--Label for Name input-->
+            <label for="name">Name:</label>
+
+            <!--Text input field for the name-->
+            <input id="name" name="name" type="text" required>
+            <!--'required' makes sure you enter something before submission-->
+
+            <br><br> <!--Line break to make space for each field-->
+
+            <!--Label for Email input-->
+            <label for="email">Email:</label>
+
+            <!--Email input field (makes sure it's a valid email like name@website.com)-->
+            <input id="email" name="email" type="email" required>
+
+            <br><br> <!--Line break-->
+            
+            <!--Label for Cellphone input-->
+            <label for="cellphone">Cell No.:</label>
+
+            <!--Phone input must be 10 digits only-->
+            <input id="cellphone" name="cellphone" type="tel"
+                   pattern="^\d{10}$" 
+                   title="Please enter a 10 digit phone number without spaces (e.g., 4166557698)"
+                   placeholder="4166557698" required> <!--'placeholder' shows a transparent text within the box before typing-->
+                    <!--'pattern sets a rule where the input must be 10 digits only'-->
+            <br><br>
+            
+            <!--Label for Comments-->
+            <label for="comments">Comments:</label>
+
+            <!--Text area for bigger comments-->
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+            <br><br>
+
+            <!--Submit Button-->
+            <button type="submit">Submit</button>
+        </form>
+
+        <!--Contact form ends-->
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 
+            <!--Span is empty at first, the script will fill it with the current year-->
+            <span id="year"></span> Sahran Hossain -
+        <a href="mailto:sahran.hossain@ontariotechu.net">sahran.hossain@ontariotechu.net</a>
+        </p>
+    </footer>
+
+        <!--Script fills in the span with the current year-->
+        <script>
+            document.getElementByID('year').textContent = new Date().getFullYear();
+        </script>
+</body>
+</html>

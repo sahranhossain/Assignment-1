@@ -1,0 +1,180 @@
+/*------------------------
+  global.css
+  This will share the color style across all viewports
+  Applied on every page mobile/tablet/desktop
+------------------------*/
+
+/* Global Color Scheme */
+:root{
+  --c1:#1a1a1a;   /* dark gray background (instead of pure black) */
+  --c2:#0d0d0d;   /* almost black for header/banner */
+  --c3:#2c2c2c;   /* slightly lighter gray for body sections */
+  --c4:#555555;   /* medium gray for borders and accents */
+  --c5:#f5f5f5;   /* soft white (not pure white, easier on the eyes) */
+  --text-dark:#111; /* black text (used inside light panels/cards) */
+  --panel:#ffffff;  /* white panels/cards for the main content */
+  --link:#00bfa6;   /* teal accent for links and buttons */
+  --link-hover:#00e6c0; /* brighter teal for hover/focus state */
+}
+
+/* Reset Base Styles */
+html, body{
+    margin: 0; /* Remove default spacing */
+    padding: 0; /* Remove default padding */
+}
+
+body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* Font stack used for a clean and modern look */
+    line-height: 1.6; /* add room between lines for redability */
+    background: var(--c3); /* Sets site backround as black */
+    color: var(--c5); /* Sets default text color as white */
+}
+
+/* Make images and videos resive automatically */
+img, video{
+    max-width: 100%; /* image or video shrinks to fit it's container */
+    height: auto; /* keeps the proportions to avoid strecthing */
+    display: block; /* removes small gaps under images */
+}
+
+/* Link Styles */
+a{
+    color: var(--link); /* blue link color */
+    text-decoration: none; /* removes the underline by default */
+    transition: color 0.2s ease; /* smooth color change on the hover */
+}
+a:hover,
+a:focus{
+    color: var(--link-hover); /* lighter teal on hover/focus */
+    text-decoration: underline; /* underline links on hover and focus */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4{
+    font-weight: 600; /* makes headings bold */
+    margin-top: 0; /* prevents extra spacing aboce the headings */
+    color: var(--c5); /* headings are white on black backround */
+}
+
+/* Header Styles */
+header{
+    background: linear-gradient(135deg, var(--c2), var(--c3)); /* angled gradient */
+  color: var(--c5);      /* white text inside header */
+  padding: 1rem; /* space inside the header */
+}
+
+/* Hero Section */
+.hero{
+  background: linear-gradient(to right, var(--c2), var(--c3)); /* horizontal gradient */
+  color: var(--c5);       /* keeps the text readable on dark gradient */
+  padding: 2rem;          /* roomy area to feel like a banner */
+  border-radius: 8px;     /* soft corners */
+  margin-bottom: 1.5rem;  /* space below the hero before other content */
+  /*subtle glow so the hero stands out slightly */
+  box-shadow: 0 6px 18px rgba(0,0,0,.35); 
+}
+
+/* Footer Styles */
+footer{
+    background: var(--c2); /*footer matches header (dark, almost black) */
+    text-align: center; /* centers text in the footer */
+    padding: 1rem; /* adds space inside the footer */
+    border-top: 1px solid var(--c4); /* adds gray line on top of the footer */
+    color: var(--c5); /* footer text is white */
+}
+footer a{
+    color: var(--link); /* footer links are blue */
+    text-decoration: underline; /* underline for footer links */
+}
+
+/*Project Block Styles */
+article{
+    background: var(--c3); /* keep background gray */
+    border: 2px solid var(--c1); /* add solid black border */
+    border-radius: 6px;          /* rounded corners for a clean look */
+    padding: 12px;               /* space inside the box */
+    margin: 16px 0;              /* space between each project block */
+}
+
+/* Project Titles */
+article h3{
+    margin-top: 0; /* no extra spacing at the top */
+    border-bottom: 1px solid var(--c4); /* subtle line under titles */
+    padding-bottom: 6px; /* makes space between text and line */
+    color: var(--c5);  /* keep titles white */
+}
+
+/* Main Content Box, applies to all <main> content */
+main{
+    background: var(--c3); /*dark gray backround */
+    border: 2px solid var(--c1); /* black border */
+    border-radius: 6px; /* rounded corners */
+    padding: 16px; /* space inside the box */
+    margin: 16px ; /* space around the box */
+    color: var(--c5); /* white text */
+    box-shadow: 0 4px 12px rgba(0,0,0,.3); /* adds subtle shadow */
+}
+
+/* Contact Form Styling */
+
+/* Wraps  whole form in a styled box */
+form {
+  background: var(--c3);       /* gray box behind form */
+  border: 2px solid var(--c1); /* black border around form*/
+  border-radius: 6px; /* rounded corners */
+  padding: 20px; /* adds space inside the form */
+  margin-top: 20px; /* seperates form from content above it */
+}
+
+/* Style each form label (the text above the inputs) */
+form label {
+  display: block;   /* force onto its own line */
+  background: var(--c2);  /* darker gray header box */
+  color: var(--c5);  /* white label text */
+  padding: 8px;    /* space inside the label box */  
+  border-radius: 4px; /* rounded label box */
+  margin-top: 12px; /* space above each label */
+  margin-bottom: 6px; /* small space before input field */
+  font-weight: bold; /* makes label text stand out */
+}
+
+/* Styl text inputs and text area (where the user types their info) */
+form input[type="text"], 
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;  /* input stretches to fill form width */
+  padding: 10px; /* the space inside input field */
+  border: 1px solid var(--c4); /* gray boarder around inputs */
+  border-radius: 6px; /* adds rounded corners */
+  font-size: 1rem; /* adds a readable font size */
+  background: var(--panel);    /* white backround for input field */
+  color: var(--text-dark);     /* black text inside input */
+  box-sizing: border-box; /* includes padding/border in total width */
+}
+
+/* Add resizing for the comments box */
+form textarea {
+  resize: vertical; /* let user resize height */
+  min-height: 100px; /* makes sure box isn't too small */
+}
+
+/* Submit button styled with teal accent */
+form button {
+  margin-top: 16px; /* space above the button */
+  padding: 10px 16px; /* space inside the button */
+  font-size: 1rem; /* readable button text */
+  border: none; /* removes border outline */
+  border-radius: 6px; /* rounded corners */
+  cursor: pointer; /* shows pointer cursor on hover */
+  background: var(--link);     /* teal backround color */
+  color: var(--c5);            /* white text on button */
+  transition: background 0.2s ease; /* smooth hover color change */
+}
+
+/* Hover/focus effect for submit button */
+form button:hover,
+form button:focus {
+  background: var(--link-hover); /* brighter teal on the hover/focus*/
+}

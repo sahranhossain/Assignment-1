@@ -1,0 +1,32 @@
+/*---------------------------
+tablet.css
+This is for tablets
+For medium screen layout tweaks
+---------------------------*/
+
+/* Table Navigation Menu */
+/* Style the unordered list (<ul>) insdie the nav */
+nav ul{
+    list-style: none; /* removes bullet points from the lists */
+    margin: 0; /* remove default spacing around the list */
+    padding: 0; /* remove default padding inside the list */
+    text-align: center; /* centers the nav items in the header */
+}
+
+/*Style each list item (<li>) inside the ul */
+nav li {
+    display: inline-block; /* puts nav items side by side */
+    margin: 0 10px; /* adds horizontal spacing between nav links */
+}
+
+/* Style each link (<a>) inside the list items */
+nav a {
+    padding: 8px 10px; /* makes each link easier to tap */
+    border-radius: 4px; /* rounds the corners of the links */
+}
+
+/* Main content adjustments for tablets */
+main {
+    margin: 20px; /* adds more space from the edges */
+    padding: 20px; /* adds more padding inside the content */
+}

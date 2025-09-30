@@ -1,0 +1,25 @@
+/*-------------------------------
+  mobile.css
+  This is for mobile phones
+  For small screen layout tweaks
+-------------------------------*/
+
+/* Mobile Navigation Menu */
+/* Style the unordered list (<ul>) insdie the nav */
+nav ul{
+    list-style: none; /* removes bullet points from the lists */
+    margin: 0; /* remove default spacing around the list */
+    padding: 0; /* remove default padding inside the list */
+}
+
+/*Style each list item (<li>) inside the ul */
+nav li{
+    margin-bottom: 8px; /* puts space between each nav item so links aren't cramped */
+}
+
+/* Style each link (<a>) inside the list items */
+nav a {
+    display: inline-block; /* makes padding to apply properly around text */
+    padding: 10px 12px; /* makes each link easier to tap */
+    border-radius: 6px; /* rounds the corners of the links */
+}
